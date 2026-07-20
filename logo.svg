@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="auraOuter" cx="47%" cy="43%" r="52%">
+      <stop offset="0%" stop-color="#5E8EFF" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#3E6EF5" stop-opacity="0.28"/>
+      <stop offset="65%" stop-color="#2F55D9" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2F55D9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auraInner" cx="48%" cy="45%" r="34%">
+      <stop offset="0%" stop-color="#A8C4FF" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#6E9BFF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#6E9BFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fTL" gradientUnits="userSpaceOnUse" x1="168" y1="104" x2="254" y2="252">
+      <stop offset="0%" stop-color="#EDF4FF"/>
+      <stop offset="38%" stop-color="#8FB2F4"/>
+      <stop offset="78%" stop-color="#3E68D8"/>
+      <stop offset="100%" stop-color="#2B4FC0"/>
+    </linearGradient>
+    <linearGradient id="fTR" gradientUnits="userSpaceOnUse" x1="280" y1="120" x2="430" y2="270">
+      <stop offset="0%" stop-color="#7FA0EC"/>
+      <stop offset="45%" stop-color="#2C51BE"/>
+      <stop offset="100%" stop-color="#152F8E"/>
+    </linearGradient>
+    <linearGradient id="fBL" gradientUnits="userSpaceOnUse" x1="100" y1="268" x2="260" y2="440">
+      <stop offset="0%" stop-color="#3E68D8"/>
+      <stop offset="55%" stop-color="#1E3FA6"/>
+      <stop offset="100%" stop-color="#122868"/>
+    </linearGradient>
+    <linearGradient id="fBR" gradientUnits="userSpaceOnUse" x1="278" y1="256" x2="400" y2="424">
+      <stop offset="0%" stop-color="#1E3FA6"/>
+      <stop offset="55%" stop-color="#101F60"/>
+      <stop offset="100%" stop-color="#070F38"/>
+    </linearGradient>
+    <linearGradient id="rimGrad" gradientUnits="userSpaceOnUse" x1="140" y1="90" x2="390" y2="430">
+      <stop offset="0%" stop-color="#F4F8FF" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#7FA2E8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0A184A" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="core" gradientUnits="userSpaceOnUse" cx="250" cy="244" r="120">
+      <stop offset="0%" stop-color="#DCEAFF" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#9FC0FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9FC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fire" gradientUnits="userSpaceOnUse" cx="250" cy="246" r="52">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#BFD9FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#BFD9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spec" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="caustic" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6FA6FF" stop-opacity="0.5"/>
+      <stop offset="55%" stop-color="#4E82F0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#4E82F0" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="gem"><polygon points="256,64 448,256 256,448 64,256"/></clipPath>
+    <filter id="b2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="b4" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="b8" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <circle cx="248" cy="234" r="240" fill="url(#auraOuter)"/>
+  <circle cx="250" cy="240" r="175" fill="url(#auraInner)"/>
+  <ellipse cx="256" cy="454" rx="100" ry="16" fill="url(#caustic)" filter="url(#b4)"/>
+
+  <polygon points="256,64 250,246 64,256" fill="url(#fTL)"/>
+  <polygon points="256,64 448,256 250,246" fill="url(#fTR)"/>
+  <polygon points="64,256 250,246 256,448" fill="url(#fBL)"/>
+  <polygon points="250,246 448,256 256,448" fill="url(#fBR)"/>
+
+  <g clip-path="url(#gem)">
+    <circle cx="250" cy="244" r="130" fill="url(#core)"/>
+    <circle cx="250" cy="246" r="54" fill="url(#fire)" filter="url(#b4)"/>
+    <polygon points="256,64 448,256 250,246" fill="#0A1850" opacity="0.12"/>
+    <polygon points="120,262 250,246 200,380" fill="#8FB8FF" opacity="0.14" filter="url(#b8)"/>
+    <polygon points="250,246 340,300 256,430" fill="#5E8EFF" opacity="0.10" filter="url(#b8)"/>
+    <ellipse cx="256" cy="432" rx="150" ry="58" fill="#6FA8F2" opacity="0.12" filter="url(#b8)"/>
+  </g>
+
+  <line x1="256" y1="64" x2="250" y2="246" stroke="#FFFFFF" stroke-width="2.8" opacity="0.9" filter="url(#b2)"/>
+  <line x1="64" y1="256" x2="250" y2="246" stroke="#D5E3FF" stroke-width="1.6" opacity="0.55" filter="url(#b2)"/>
+  <line x1="448" y1="256" x2="250" y2="246" stroke="#0C1E58" stroke-width="1.5" opacity="0.6"/>
+  <line x1="256" y1="448" x2="250" y2="246" stroke="#78ACF0" stroke-width="1.6" opacity="0.38" filter="url(#b2)"/>
+
+  <polygon points="256,64 448,256 256,448 64,256" fill="none" stroke="url(#rimGrad)" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M64,256 L256,448 L448,256" fill="none" stroke="#8FD4FF" stroke-width="2.2" opacity="0.42" filter="url(#b2)"/>
+
+  <ellipse cx="204" cy="154" rx="64" ry="14" transform="rotate(-46 204 154)" fill="url(#spec)" filter="url(#b4)"/>
+  <ellipse cx="222" cy="182" rx="34" ry="6" transform="rotate(-46 222 182)" fill="url(#spec)" opacity="0.5" filter="url(#b2)"/>
+  <ellipse cx="302" cy="142" rx="32" ry="8" transform="rotate(45 302 142)" fill="url(#spec)" opacity="0.35" filter="url(#b2)"/>
+
+  <g filter="url(#b2)">
+    <path d="M256,34 L261,57 L284,64 L261,71 L256,94 L251,71 L228,64 L251,57 Z" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+  <circle cx="250" cy="246" r="4" fill="#FFFFFF" opacity="0.7" filter="url(#b2)"/>
+</svg>

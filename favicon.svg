@@ -1,6 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
-  <polygon points="14,1 1,14 14,14" fill="#7da3e3"/>
-  <polygon points="14,1 27,14 14,14" fill="#3566b5"/>
-  <polygon points="1,14 14,27 14,14" fill="#2a5aa8"/>
-  <polygon points="27,14 14,27 14,14" fill="#16407e"/>
+  <defs>
+    <linearGradient id="gTL" x1="8" y1="3" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EDF4FF"/><stop offset="55%" stop-color="#8FB2F4"/><stop offset="100%" stop-color="#3E68D8"/>
+    </linearGradient>
+    <linearGradient id="gTR" x1="16" y1="4" x2="25" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7FA0EC"/><stop offset="60%" stop-color="#2C51BE"/><stop offset="100%" stop-color="#152F8E"/>
+    </linearGradient>
+    <linearGradient id="gBL" x1="4" y1="15" x2="14" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3E68D8"/><stop offset="60%" stop-color="#1E3FA6"/><stop offset="100%" stop-color="#122868"/>
+    </linearGradient>
+    <linearGradient id="gBR" x1="15" y1="14" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3FA6"/><stop offset="55%" stop-color="#101F60"/><stop offset="100%" stop-color="#070F38"/>
+    </linearGradient>
+    <radialGradient id="gFire" cx="13.7" cy="13.6" r="5.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/><stop offset="50%" stop-color="#BFD9FF" stop-opacity="0.3"/><stop offset="100%" stop-color="#BFD9FF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="gClip"><polygon points="14,1 27,14 14,27 1,14"/></clipPath>
+  </defs>
+  <polygon points="14,1 13.7,13.6 1,14" fill="url(#gTL)"/>
+  <polygon points="14,1 27,14 13.7,13.6" fill="url(#gTR)"/>
+  <polygon points="1,14 13.7,13.6 14,27" fill="url(#gBL)"/>
+  <polygon points="13.7,13.6 27,14 14,27" fill="url(#gBR)"/>
+  <circle cx="13.7" cy="13.6" r="5.5" fill="url(#gFire)" clip-path="url(#gClip)"/>
+  <line x1="14" y1="1" x2="13.7" y2="13.6" stroke="#FFFFFF" stroke-width="0.5" opacity="0.85"/>
+  <polygon points="14,1 27,14 14,27 1,14" fill="none" stroke="#B9CFF6" stroke-width="0.45" opacity="0.5" stroke-linejoin="round"/>
 </svg>
