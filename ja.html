@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruri Brief — 出典つき調査を、数日でお手元に。</title>
+<meta name="description" content="競合比較・市場ミニ調査・海外リサーチを、根拠URL付き・定額・非同期で48〜96時間納品。打ち合わせ不要。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --ruri:#1e50a2;
+  --ruri-deep:#16407e;
+  --ruri-pale:#eef3fa;
+  --ink:#1c2431;
+  --ink-soft:#4a5568;
+  --line:#dbe3ee;
+  --gold:#b8860b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;color:var(--ink);background:#fff;line-height:1.9;font-size:16px;word-break:auto-phrase;overflow-wrap:break-word}
+h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;line-height:1.4;font-weight:600}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+a{color:var(--ruri);text-decoration:none}
+a:hover{text-decoration:underline}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--ink)}
+.logo:hover{text-decoration:none}
+.logo-gem{width:16px;height:16px;background:var(--ruri);border-radius:3px;transform:rotate(45deg);box-shadow:inset -2px -2px 0 rgba(0,0,0,.18)}
+.nav-links{display:flex;gap:24px;font-size:.9rem}
+.nav-links a{color:var(--ink-soft)}
+.nav-links a:hover{color:var(--ruri);text-decoration:none}
+.lang{font-size:.85rem;border:1px solid var(--line);padding:4px 12px;border-radius:20px;color:var(--ink-soft)}
+.hero{padding:88px 0 64px;background:linear-gradient(180deg,var(--ruri-pale) 0%,#fff 100%)}
+.hero h1{font-size:clamp(1.7rem,4.6vw,2.7rem);max-width:760px;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--ruri)}
+.hero p.lead{font-size:1.08rem;color:var(--ink-soft);max-width:660px;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:600;font-size:.96rem}
+.btn-primary{background:var(--ruri);color:#fff}
+.btn-primary:hover{background:var(--ruri-deep);text-decoration:none}
+.btn-ghost{border:1.5px solid var(--ruri);color:var(--ruri)}
+.btn-ghost:hover{background:var(--ruri-pale);text-decoration:none}
+.hero-facts{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.fact b{display:block;font-size:1.45rem;color:var(--ruri);font-family:Georgia,serif}
+.fact span{font-size:.84rem;color:var(--ink-soft)}
+section{padding:68px 0}
+section.alt{background:var(--ruri-pale)}
+.kicker{font-size:.78rem;letter-spacing:.16em;color:var(--ruri);font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(1.4rem,3.2vw,1.9rem);margin-bottom:14px}
+.sub{color:var(--ink-soft);max-width:660px;margin-bottom:38px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 26px;display:flex;flex-direction:column}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card .tag{font-size:.76rem;color:var(--gold);font-weight:700;letter-spacing:.06em;margin-bottom:12px}
+.card p{font-size:.92rem;color:var(--ink-soft);margin-bottom:16px}
+.card ul{list-style:none;margin-bottom:20px;flex-grow:1}
+.card li{font-size:.89rem;padding:5px 0 5px 24px;position:relative}
+.card li::before{content:"✓";position:absolute;left:2px;color:var(--ruri);font-weight:700}
+.price{font-family:Georgia,serif;font-size:1.25rem}
+.price small{font-size:.8rem;color:var(--ink-soft)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);font-family:Georgia,serif;font-size:1.8rem;color:var(--ruri);opacity:.35;display:block;margin-bottom:8px}
+.step h3{font-size:1rem;margin-bottom:8px}
+.step p{font-size:.87rem;color:var(--ink-soft)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:.98rem;list-style:none;position:relative;padding-right:32px}
+summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--ruri);font-size:1.3rem;font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;font-size:.92rem;color:var(--ink-soft);max-width:720px}
+footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;color:var(--ink-soft)}
+.foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+@media(max-width:640px){.nav-links{display:none}.hero{padding:60px 0 44px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="ja.html"><span class="logo-gem"></span>Ruri Brief</a>
+    <nav class="nav-links">
+      <a href="#services">サービス</a>
+      <a href="#how">進め方</a>
+      <a href="#faq">よくある質問</a>
+      <a class="lang" href="index.html">English</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>出典つき調査を、<br><em>数日で</em>お手元に。</h1>
+    <p class="lead">競合比較・市場ミニ調査・海外リサーチを、<strong>根拠URL付き・定額・非同期</strong>で48〜96時間納品。打ち合わせは不要です。書面のご依頼だけで、意思決定に使える調査が届きます。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">調査を相談する</a>
+      <a class="btn btn-ghost" href="#services">サービスと料金を見る</a>
+    </div>
+    <div class="hero-facts">
+      <div class="fact"><b>48–96h</b><span>標準納期</span></div>
+      <div class="fact"><b>全主張</b><span>出典URL付き</span></div>
+      <div class="fact"><b>0回</b><span>必要な打ち合わせ</span></div>
+      <div class="fact"><b>日英</b><span>両言語対応</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">SERVICES</div>
+    <h2>3つの定型サービス</h2>
+    <p class="sub">すべて定額・事前見積もり。ご依頼は書面（メール）で完結します。</p>
+    <div class="cards">
+      <div class="card">
+        <div class="tag">RESEARCH SPRINT</div>
+        <h3>競合・市場ミニ調査</h3>
+        <p>競合10〜20社の比較表、市場規模、価格相場、参入状況——問いを絞った速攻調査。</p>
+        <ul>
+          <li>一次情報ベース（公式・官公庁・業界紙）</li>
+          <li>出典URL一覧表＋生データCSV</li>
+          <li>事実と推測を明確に区別</li>
+          <li>48〜96時間納品</li>
+        </ul>
+        <div class="price">¥15,000〜50,000 <small>／件（範囲による）</small></div>
+      </div>
+      <div class="card">
+        <div class="tag">GLOBAL RESEARCH</div>
+        <h3>海外リサーチ</h3>
+        <p>海外市場・海外競合・海外の規制動向を、英語ソースから日本語でレポート。</p>
+        <ul>
+          <li>英語一次情報を直接調査</li>
+          <li>海外企業の価格・戦略の実勢</li>
+          <li>日本語で構造化して納品</li>
+          <li>48〜96時間納品</li>
+        </ul>
+        <div class="price">¥15,000〜60,000 <small>／件</small></div>
+      </div>
+      <div class="card">
+        <div class="tag">DATA SPRINT</div>
+        <h3>データ収集・自動化</h3>
+        <p>公開情報からのリスト作成・データ抽出・スプレッドシート自動化・ダッシュボード構築。</p>
+        <ul>
+          <li>CSV／Googleスプレッドシート納品</li>
+          <li>収集の適法性チェック込み</li>
+          <li>再実行スクリプト付きも可</li>
+          <li>要件フォームで非同期完結</li>
+        </ul>
+        <div class="price">¥40,000〜150,000 <small>／件</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <div class="kicker">PROCESS</div>
+    <h2>進め方——すべて非同期</h2>
+    <p class="sub">会議を増やさず、答えだけを受け取りたい方のための設計です。</p>
+    <div class="steps">
+      <div class="step"><h3>書面でご依頼</h3><p>知りたいことをメールでお送りください。数時間以内に範囲・金額・納期を書面でご回答します。</p></div>
+      <div class="step"><h3>調査</h3><p>官公庁統計・業界紙・企業開示・料金ページなど一次情報に当たります。</p></div>
+      <div class="step"><h3>納品</h3><p>出典表付きのPDF／ドキュメント＋生データCSV。事実と推測は必ず区別して表記します。</p></div>
+      <div class="step"><h3>書面フォロー</h3><p>納品後の質問・修正は2回まで無償。それ以上は事前見積もりの上で対応します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2>よくある質問</h2>
+    <div style="margin-top:26px">
+      <details>
+        <summary>AIを使っていますか？</summary>
+        <p>はい、公開の方針として使っています。AIの活用により、同じ時間で人間の何倍もの日本語・英語ソースを読み、構造化できます。ただし<strong>納品物は必ず人間が出典を検証し、確認のうえでお届けします</strong>。未編集のAI出力をそのまま納品することはありません。</p>
+      </details>
+      <details>
+        <summary>本当に打ち合わせなしで大丈夫？</summary>
+        <p>大丈夫です。要件のすり合わせは書面で行います——記録が残り、結果的に速く正確です。どうしてもお電話をご希望の場合は、中位プラン以上で有償オプションをご用意しています。</p>
+      </details>
+      <details>
+        <summary>調べても分からなかった場合は？</summary>
+        <p>公開情報では信頼できる答えが出せないと判明した場合、「何が分かって・何が分からないか」を正直にご報告し、未実施分は返金します。当てずっぽうを納品するくらいなら、お代をいただきません。</p>
+      </details>
+      <details>
+        <summary>運営者は？</summary>
+        <p>東京のリサーチ系合同会社が運営しています。正式な社名・所在地はお見積もり・契約・請求書にすべて記載します。「瑠璃（るり）」はラピスラズリの和名——深い青は、丁寧な仕事の色です。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <h2 style="margin-bottom:12px">まずは1件、お試しください</h2>
+    <p class="sub" style="margin:0 auto 26px">知りたいことをメールでお送りいただければ、数時間以内に書面でお見積もりします。</p>
+    <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">hello@ruribrief.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="logo" style="font-size:1.05rem;margin-bottom:10px"><span class="logo-gem" style="width:12px;height:12px"></span>Ruri Brief</div>
+      <p>出典つき調査を、数日でお手元に。</p>
+    </div>
+    <div style="max-width:520px">
+      <p>© 2026 Ruri Brief. 運営は東京のリサーチ系合同会社です。正式な事業者情報はお見積もり・契約・請求書に記載します。<a href="index.html">English</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
