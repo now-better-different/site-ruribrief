@@ -4,8 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ruri Brief — 調査結果を、数日でお手元に。</title>
-<meta name="description" content="競合比較・市場ミニ調査・海外リサーチを、根拠URL付き・定額・非同期で48〜96時間納品。打ち合わせ不要。">
+<meta name="description" content="競合比較・市場ミニ調査・海外リサーチを、根拠URL付き・定額で2〜4営業日納品。打ち合わせ不要、メール1本で完結。お見積もり無料。">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ruribrief.com/ja.html">
+<link rel="alternate" hreflang="en" href="https://ruribrief.com/">
+<link rel="alternate" hreflang="ja" href="https://ruribrief.com/ja.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ruri Brief — 調査結果を、数日でお手元に。">
+<meta property="og:description" content="競合比較・市場ミニ調査・海外リサーチを、根拠URL付き・定額で2〜4営業日納品。打ち合わせ不要、メール1本で完結。">
+<meta property="og:url" content="https://ruribrief.com/ja.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
 <style>
 :root{
   --ruri:#1e50a2;
@@ -14,7 +23,7 @@
   --ink:#1c2431;
   --ink-soft:#4a5568;
   --line:#dbe3ee;
-  --gold:#b8860b;
+  --gold:#8a6508;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,20 +37,21 @@ header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:bl
 .logo{display:flex;align-items:center;gap:10px;font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--ink)}
 .logo:hover{text-decoration:none}
 .logo-gem{width:16px;height:19px;flex-shrink:0}
-.nav-links{display:flex;gap:24px;font-size:.9rem}
+.nav-links{display:flex;gap:24px;font-size:.9rem;align-items:center}
 .nav-links a{color:var(--ink-soft)}
 .nav-links a:hover{color:var(--ruri);text-decoration:none}
 .lang{font-size:.85rem;border:1px solid var(--line);padding:4px 12px;border-radius:20px;color:var(--ink-soft)}
 .hero{padding:88px 0 64px;background:linear-gradient(180deg,var(--ruri-pale) 0%,#fff 100%)}
 .hero h1{font-size:clamp(1.7rem,4.6vw,2.7rem);max-width:760px;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--ruri)}
-.hero p.lead{font-size:1.08rem;color:var(--ink-soft);max-width:660px;margin-bottom:30px}
+.hero p.lead{font-size:1.08rem;color:var(--ink-soft);max-width:680px;margin-bottom:30px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:600;font-size:.96rem}
 .btn-primary{background:var(--ruri);color:#fff}
 .btn-primary:hover{background:var(--ruri-deep);text-decoration:none}
 .btn-ghost{border:1.5px solid var(--ruri);color:var(--ruri)}
 .btn-ghost:hover{background:var(--ruri-pale);text-decoration:none}
+.cta-note{font-size:.85rem;color:var(--ink-soft);margin-top:12px;max-width:660px}
 .hero-facts{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
 .fact b{display:block;font-size:1.45rem;color:var(--ruri);font-family:Georgia,serif}
 .fact span{font-size:.84rem;color:var(--ink-soft)}
@@ -49,30 +59,42 @@ section{padding:68px 0}
 section.alt{background:var(--ruri-pale)}
 .kicker{font-size:.78rem;letter-spacing:.16em;color:var(--ruri);font-weight:700;margin-bottom:10px}
 h2{font-size:clamp(1.4rem,3.2vw,1.9rem);margin-bottom:14px}
-.sub{color:var(--ink-soft);max-width:660px;margin-bottom:38px}
+.sub{color:var(--ink-soft);max-width:680px;margin-bottom:38px}
+.usecases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.usecase{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;font-size:.92rem}
+.usecase b{display:block;margin-bottom:6px;color:var(--ruri-deep)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 26px;display:flex;flex-direction:column}
 .card h3{font-size:1.15rem;margin-bottom:6px}
 .card .tag{font-size:.76rem;color:var(--gold);font-weight:700;letter-spacing:.06em;margin-bottom:12px}
 .card p{font-size:.92rem;color:var(--ink-soft);margin-bottom:16px}
-.card ul{list-style:none;margin-bottom:20px;flex-grow:1}
+.card ul{list-style:none;margin-bottom:18px;flex-grow:1}
 .card li{font-size:.89rem;padding:5px 0 5px 24px;position:relative}
 .card li::before{content:"✓";position:absolute;left:2px;color:var(--ruri);font-weight:700}
-.price{font-family:Georgia,serif;font-size:1.25rem}
-.price small{font-size:.8rem;color:var(--ink-soft)}
+.tiers{border-top:1px solid var(--line);margin-top:4px;padding-top:14px;font-size:.89rem}
+.tiers div{display:flex;justify-content:space-between;padding:4px 0}
+.tiers b{font-family:Georgia,serif;color:var(--ink);white-space:nowrap;margin-left:12px}
+.tiers span{color:var(--ink-soft)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;counter-reset:step}
 .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px;counter-increment:step}
-.step::before{content:counter(step,decimal-leading-zero);font-family:Georgia,serif;font-size:1.8rem;color:var(--ruri);opacity:.35;display:block;margin-bottom:8px}
+.step::before{content:counter(step,decimal-leading-zero);font-family:Georgia,serif;font-size:1.8rem;color:#5b7db3;display:block;margin-bottom:8px}
 .step h3{font-size:1rem;margin-bottom:8px}
 .step p{font-size:.87rem;color:var(--ink-soft)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.why-item h3{font-size:1.02rem;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.why-item .dot{width:10px;height:10px;background:var(--ruri);border-radius:2px;transform:rotate(45deg);flex-shrink:0}
+.why-item p{font-size:.91rem;color:var(--ink-soft)}
+.mailbox{background:#fff;border:1px dashed var(--ruri);border-radius:10px;padding:18px 22px;margin-top:20px;font-size:.9rem;max-width:660px}
+.mailbox b{color:var(--ruri-deep)}
 details{border-bottom:1px solid var(--line);padding:18px 0}
 summary{cursor:pointer;font-weight:600;font-size:.98rem;list-style:none;position:relative;padding-right:32px}
+summary::-webkit-details-marker{display:none}
 summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--ruri);font-size:1.3rem;font-weight:400}
 details[open] summary::after{content:"–"}
 details p{margin-top:12px;font-size:.92rem;color:var(--ink-soft);max-width:720px}
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;color:var(--ink-soft)}
 .foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-@media(max-width:640px){.nav-links{display:none}.hero{padding:60px 0 44px}}
+@media(max-width:640px){.nav-links a{display:none}.nav-links a.lang{display:inline-block}.hero{padding:60px 0 44px}}
 </style>
 </head>
 <body>
@@ -82,9 +104,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;col
     <a class="logo" href="ja.html"><svg class="logo-gem" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</a>
     <nav class="nav-links">
       <a href="#services">サービス</a>
+      <a href="samples/kintai-saas.html">見本レポート</a>
       <a href="#how">進め方</a>
       <a href="#faq">よくある質問</a>
-      <a class="lang" href="index.html">English</a>
+      <a class="lang" href="index.html" lang="en" hreflang="en">English</a>
     </nav>
   </div>
 </header>
@@ -92,62 +115,87 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;col
 <div class="hero">
   <div class="wrap">
     <h1>調査結果を、<br><em>数日で</em>お手元に。</h1>
-    <p class="lead">競合比較・市場ミニ調査・海外リサーチを、<strong>根拠URL付き・定額・非同期</strong>で48〜96時間納品。打ち合わせは不要です。書面のご依頼だけで、意思決定に使える調査が届きます。</p>
+    <p class="lead">競合比較・市場ミニ調査・海外リサーチを、<strong>根拠URL付き・定額</strong>で2〜4営業日（48〜96時間）納品。打ち合わせはゼロ。メール1本のご依頼で、意思決定に使える調査が届きます。お見積もりは無料です。</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">調査を相談する</a>
+      <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">調査を相談する（見積無料）</a>
       <a class="btn btn-ghost" href="samples/kintai-saas.html">見本レポートを読む</a>
     </div>
+    <div class="mailbox">
+      <b>メールはこの程度で十分です:</b><br>
+      「金属部品加工の会社です。〇〇業界の競合10社ほどの価格と販路を比較したいです。予算3万円、2週間以内に欲しいです。」<br>
+      <span style="color:var(--ink-soft)">——範囲と金額はこちらで整理し、原則1営業日以内（多くの場合は数時間）にご返信します。ボタンでメールが開かない場合は hello@ruribrief.com へ直接お送りください。</span>
+    </div>
     <div class="hero-facts">
-      <div class="fact"><b>48–96h</b><span>標準納期</span></div>
-      <div class="fact"><b>全主張</b><span>出典URL付き</span></div>
-      <div class="fact"><b>0回</b><span>必要な打ち合わせ</span></div>
+      <div class="fact"><b>2〜4営業日</b><span>標準納期</span></div>
+      <div class="fact"><b>事実は全て</b><span>出典URL付き・推定は明記</span></div>
+      <div class="fact"><b>0回</b><span>打ち合わせ</span></div>
       <div class="fact"><b>日英</b><span>両言語対応</span></div>
     </div>
   </div>
 </div>
 
+<section class="alt" id="usecases" style="padding:52px 0">
+  <div class="wrap">
+    <div class="kicker">USE CASES</div>
+    <h2>こんな場面でお使いください</h2>
+    <div class="usecases" style="margin-top:28px">
+      <div class="usecase"><b>補助金の事業計画書に</b>ものづくり・事業再構築・IT導入補助金などの計画書に載せる市場規模・競合比較。出典URL付きなので、そのまま根拠資料として添付できます。</div>
+      <div class="usecase"><b>新規事業の相場観づくりに</b>参入前に「競合はいくらで・何を・どう売っているか」を短期間で把握。会議の前にたたき台が揃います。</div>
+      <div class="usecase"><b>海外市場・海外製品の下調べに</b>英語の一次情報を直接調査し、日本語で整理。輸入判断・海外展開の初期確認に。</div>
+    </div>
+  </div>
+</section>
+
 <section id="services">
   <div class="wrap">
     <div class="kicker">SERVICES</div>
-    <h2>3つの定型サービス</h2>
-    <p class="sub">すべて定額・事前見積もり。ご依頼は書面（メール）で完結します。</p>
+    <h2>3つの定額リサーチパッケージ</h2>
+    <p class="sub">すべて定額・事前見積もり。ご依頼はメールで完結します。お支払いは銀行振込（請求書払い）またはクレジットカード。適格請求書（インボイス）を発行します。</p>
     <div class="cards">
       <div class="card">
-        <div class="tag">RESEARCH SPRINT</div>
+        <div class="tag">競合・市場調査｜RESEARCH SPRINT</div>
         <h3>競合・市場ミニ調査</h3>
-        <p>競合10〜20社の比較表、市場規模、価格相場、参入状況——問いを絞った速攻調査。</p>
+        <p>競合の比較表、市場規模、価格相場、参入状況——論点を絞った短期集中の調査。</p>
         <ul>
-          <li>一次情報ベース（公式・官公庁・業界紙）</li>
+          <li>公式・公開情報ベース（官公庁統計・企業開示・専門紙）</li>
           <li>出典URL一覧表＋生データCSV</li>
-          <li>事実と推測を明確に区別</li>
-          <li>48〜96時間納品</li>
+          <li>事実と推定を明確に区別</li>
         </ul>
-        <div class="price">¥15,000〜50,000 <small>／件（範囲による）</small></div>
-        <p style="margin:14px 0 0"><a href="samples/kintai-saas.html" style="font-size:.87rem;font-weight:600">→ 見本: 勤怠管理SaaS10社比較（2026年7月版）</a></p>
+        <div class="tiers">
+          <div><span>ライト — 競合5社・比較表中心・2営業日</span><b>¥15,000</b></div>
+          <div><span>スタンダード — 競合10社＋解説＋落とし穴分析（見本と同形式）・3営業日</span><b>¥30,000</b></div>
+          <div><span>ディープ — 15〜20社＋市場データ＋CSV・4営業日</span><b>¥50,000</b></div>
+        </div>
+        <p style="margin:14px 0 0"><a href="samples/kintai-saas.html" style="font-size:.87rem;font-weight:600">→ 見本: 勤怠管理SaaS10社比較（スタンダード相当）</a></p>
       </div>
       <div class="card">
-        <div class="tag">GLOBAL RESEARCH</div>
+        <div class="tag">海外調査｜GLOBAL RESEARCH</div>
         <h3>海外リサーチ</h3>
-        <p>海外市場・海外競合・海外の規制動向を、英語ソースから日本語でレポート。</p>
+        <p>海外市場・海外競合・海外の規制動向を、英語の一次情報から日本語でレポート。</p>
         <ul>
           <li>英語一次情報を直接調査</li>
           <li>海外企業の価格・戦略の実勢</li>
           <li>日本語で構造化して納品</li>
-          <li>48〜96時間納品</li>
         </ul>
-        <div class="price">¥15,000〜60,000 <small>／件</small></div>
+        <div class="tiers">
+          <div><span>ライト — 1論点・2営業日</span><b>¥15,000</b></div>
+          <div><span>スタンダード — 競合比較＋市場概況・3営業日</span><b>¥30,000</b></div>
+          <div><span>ディープ — 包括調査＋原文資料の翻訳要約・4営業日</span><b>¥60,000</b></div>
+        </div>
       </div>
       <div class="card">
-        <div class="tag">DATA SPRINT</div>
+        <div class="tag">データ収集｜DATA SPRINT</div>
         <h3>データ収集・自動化</h3>
         <p>公開情報からのリスト作成・データ抽出・スプレッドシート自動化・ダッシュボード構築。</p>
         <ul>
           <li>CSV／Googleスプレッドシート納品</li>
-          <li>収集の適法性チェック込み</li>
+          <li>robots.txt・利用規約に配慮した収集方針（法的助言ではありません）</li>
           <li>再実行スクリプト付きも可</li>
-          <li>要件フォームで非同期完結</li>
         </ul>
-        <div class="price">¥40,000〜150,000 <small>／件</small></div>
+        <div class="tiers">
+          <div><span>単一ソースの抽出</span><b>¥40,000〜</b></div>
+          <div><span>複数ソース＋定期実行・ダッシュボード</span><b>¥80,000〜150,000</b></div>
+        </div>
       </div>
     </div>
   </div>
@@ -156,46 +204,71 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;col
 <section class="alt" id="how">
   <div class="wrap">
     <div class="kicker">PROCESS</div>
-    <h2>進め方——すべて非同期</h2>
-    <p class="sub">会議を増やさず、答えだけを受け取りたい方のための設計です。</p>
+    <h2>進め方——メールだけで完結</h2>
+    <p class="sub">会議を増やさず、答えだけを受け取りたい方のための設計です。お電話をご希望の場合は有償オプションをご用意しています（よくある質問参照）。</p>
     <div class="steps">
-      <div class="step"><h3>書面でご依頼</h3><p>知りたいことをメールでお送りください。数時間以内に範囲・金額・納期を書面でご回答します。</p></div>
-      <div class="step"><h3>調査</h3><p>官公庁統計・業界紙・企業開示・料金ページなど一次情報に当たります。</p></div>
-      <div class="step"><h3>納品</h3><p>出典表付きのPDF／ドキュメント＋生データCSV。事実と推測は必ず区別して表記します。</p></div>
-      <div class="step"><h3>書面フォロー</h3><p>納品後の質問・修正は2回まで無償。それ以上は事前見積もりの上で対応します。</p></div>
+      <div class="step"><h3>メールでご依頼</h3><p>知りたいことをメールでお送りください。原則1営業日以内（多くの場合は数時間）に範囲・金額・納期をご返信します。</p></div>
+      <div class="step"><h3>調査</h3><p>官公庁統計・専門紙・企業開示・料金ページなど公式・公開情報に直接当たります。</p></div>
+      <div class="step"><h3>納品</h3><p>出典表付きのPDF／Wordドキュメント＋生データCSV。事実と推定は必ず区別して表記します。</p></div>
+      <div class="step"><h3>メールでフォロー</h3><p>納品後の質問・修正は2回まで無償。それ以上は事前見積もりの上で対応します。</p></div>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section id="why">
+  <div class="wrap">
+    <div class="kicker">WHY RURI BRIEF</div>
+    <h2>経営会議にそのまま出せる調査品質</h2>
+    <div class="why" style="margin-top:34px">
+      <div class="why-item"><h3><span class="dot"></span>公式・公開情報主義</h3><p>官公庁統計・企業開示・専門紙に直接当たります。二次情報や推定値は、そうと分かる形でしか書きません。</p></div>
+      <div class="why-item"><h3><span class="dot"></span>全記述に出典URL</h3><p>検証可能な形でしか書きません。納品物のすべての事実に出典を付け、ご自身で確かめられます。</p></div>
+      <div class="why-item"><h3><span class="dot"></span>AIで速く、人間で正確に</h3><p>AI活用は隠しません。読解と構造化はAIで加速し、出典検証と最終確認は必ず人間が行います。</p></div>
+      <div class="why-item"><h3><span class="dot"></span>定額・事前見積もり</h3><p>着手前に範囲と金額を書面で確定。答えられない問いは、着手前にそう申し上げます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="faq">
   <div class="wrap">
     <div class="kicker">FAQ</div>
     <h2>よくある質問</h2>
     <div style="margin-top:26px">
       <details>
         <summary>AIを使っていますか？</summary>
-        <p>はい、公開の方針として使っています。AIの活用により、同じ時間で人間の何倍もの日本語・英語ソースを読み、構造化できます。ただし<strong>納品物は必ず人間が出典を検証し、確認のうえでお届けします</strong>。未編集のAI出力をそのまま納品することはありません。</p>
+        <p>はい、公開の方針として使っています。AIの活用により、同じ時間で人間の何倍もの日本語・英語ソースを読み、構造化できます。ただし<strong>納品物は必ず人間が出典を検証し、確認のうえでお届けします</strong>。未編集のAI出力をそのまま納品することはありません。AI任せとの品質の違いは、見本レポートの「要問合せ」の正直な明記や「選定の落とし穴」の分析でご確認いただけます（<a href="samples/kintai-saas.html">見本を読む</a>）。</p>
+      </details>
+      <details>
+        <summary>依頼内容は秘密にしてもらえますか？</summary>
+        <p>はい。ご依頼の内容・調査結果・「ご相談があった」という事実そのものを、他のお客様への転用・言及に使うことはありません。お客様の機密資料を明示的な許可なく外部AIツールに入力することもありません。秘密保持契約（NDA）はスタンダード以上で無償対応します。</p>
+      </details>
+      <details>
+        <summary>お支払い方法は？</summary>
+        <p>銀行振込（請求書払い）またはクレジットカード（Stripe）です。<strong>適格請求書（インボイス）を発行します</strong>。お支払い条件はお見積もり時に書面でご確認いただけます。</p>
       </details>
       <details>
         <summary>本当に打ち合わせなしで大丈夫？</summary>
-        <p>大丈夫です。要件のすり合わせは書面で行います——記録が残り、結果的に速く正確です。どうしてもお電話をご希望の場合は、中位プラン以上で有償オプションをご用意しています。</p>
+        <p>大丈夫です。要件のすり合わせはメールで行います——記録が残り、結果的に速く正確です。お電話をご希望の場合は、スタンダード（¥30,000）以上のご依頼に25分のお電話（＋¥9,000）を追加できます。要点は後からメールでもお渡しするので、記録も残ります。</p>
       </details>
       <details>
         <summary>調べても分からなかった場合は？</summary>
-        <p>公開情報では信頼できる答えが出せないと判明した場合、「何が分かって・何が分からないか」を正直にご報告し、未実施分は返金します。当てずっぽうを納品するくらいなら、お代をいただきません。</p>
+        <p>公開情報では信頼できる答えが出せないと調査途中で判明した場合、「何が分かって・何が分からないか」を整理したメモをお届けし、事前に合意した範囲に対する未実施分を返金します。当て推量を納品するくらいなら、代金はいただきません。</p>
       </details>
       <details>
-        <summary>運営者は？</summary>
-        <p>東京のリサーチ系合同会社が運営しています。正式な社名・所在地はお見積もり・契約・請求書にすべて記載します。「瑠璃（るり）」はラピスラズリの和名——深い青は、丁寧な仕事の色です。</p>
+        <summary>価格が公開されていない業界でも調べられますか？</summary>
+        <p>調べられます。官公庁統計・業界紙・入札結果・求人情報などから相場を推定し、<strong>推定であることを明記して</strong>お届けします。十分な確度が見込めない場合は、着手前にその旨をお伝えします。</p>
+      </details>
+      <details>
+        <summary>どんな会社が運営していますか？</summary>
+        <p>東京都渋谷区のリサーチ事業を営む合同会社が運営しています。事業者情報の詳細は<a href="legal.html">特定商取引法に基づく表記</a>をご覧ください。お見積もり・契約・請求書にも同一の事業者情報を記載します。なお「Ruri Brief（ルリ・ブリーフ）」＝瑠璃色の要点報告書。瑠璃はラピスラズリの和名、Briefは英語で「短い報告書」の意です。</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap" style="text-align:center">
     <h2 style="margin-bottom:12px">まずは1件、お試しください</h2>
-    <p class="sub" style="margin:0 auto 26px">知りたいことをメールでお送りいただければ、数時間以内に書面でお見積もりします。</p>
+    <p class="sub" style="margin:0 auto 26px">知りたいことをメールでお送りいただければ、原則1営業日以内（多くの場合は数時間）に書面でお見積もりします。見積もりは無料です。</p>
     <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=%E8%AA%BF%E6%9F%BB%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">hello@ruribrief.com</a>
   </div>
 </section>
@@ -205,9 +278,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.85rem;col
     <div>
       <div class="logo" style="font-size:1.05rem;margin-bottom:10px"><svg class="logo-gem" style="width:12px;height:14px" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</div>
       <p>調査結果を、数日でお手元に。</p>
+      <p style="margin-top:8px"><a href="samples/kintai-saas.html">見本レポート</a> · <a href="legal.html">特定商取引法に基づく表記</a> · <a href="index.html" lang="en" hreflang="en">English</a></p>
     </div>
     <div style="max-width:520px">
-      <p>© 2026 Ruri Brief. 運営は東京のリサーチ系合同会社です。正式な事業者情報はお見積もり・契約・請求書に記載します。<a href="index.html">English</a></p>
+      <p>© 2026 Ruri Brief. 運営は東京都渋谷区のリサーチ系合同会社です。事業者情報は<a href="legal.html">特定商取引法に基づく表記</a>と、お見積もり・契約・請求書に記載します。本サービスは法人・個人事業主向けです。</p>
     </div>
   </div>
 </footer>

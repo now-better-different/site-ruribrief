@@ -7,7 +7,7 @@
 <meta name="description" content="見本レポート：勤怠管理SaaS10社の料金・機能比較。全料金を公式ページから直接取得・出典URL付き。">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <style>
-:root{--ruri:#1e50a2;--ruri-deep:#16407e;--ruri-pale:#eef3fa;--ink:#1c2431;--ink-soft:#4a5568;--line:#dbe3ee;--gold:#b8860b}
+:root{--ruri:#1e50a2;--ruri-deep:#16407e;--ruri-pale:#eef3fa;--ink:#1c2431;--ink-soft:#4a5568;--line:#dbe3ee;--gold:#8a6508}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;color:var(--ink);line-height:1.85;font-size:16px;background:#fff;word-break:auto-phrase;overflow-wrap:break-word}
 h1,h2,h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;line-height:1.4}
@@ -31,7 +31,10 @@ article h3{font-size:1.05rem;margin:26px 0 8px}
 article p{margin-bottom:15px}
 article ul,article ol{margin:0 0 15px 24px}
 article li{margin-bottom:8px}
-.tbl{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:8px}
+.tbl{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:8px;position:relative}
+.tbl::before{content:"→ 表は横にスクロールできます";display:block;font-size:.72rem;color:var(--ink-soft);text-align:right;padding:6px 10px 0}
+@media(min-width:900px){.tbl::before{display:none}}
+article a{text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(30,80,162,.45)}
 table{border-collapse:collapse;width:100%;font-size:.85rem;min-width:760px}
 th{background:var(--ruri-pale);text-align:left;padding:9px 12px;font-weight:700;border-bottom:2px solid var(--line);white-space:nowrap}
 td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -47,7 +50,7 @@ tr:last-child td{border-bottom:none}
 </head>
 <body>
 
-<div class="sample-band">見本レポート — ¥30,000スタンダード（72時間納品）の品質見本です</div>
+<div class="sample-band">見本レポート — ¥30,000スタンダード（3営業日納品）相当の構成・体裁の見本です（実際の内容は調査範囲により異なります）· <a href="../ja.html#services" style="color:#fff;text-decoration:underline">料金を見る</a></div>
 <header>
   <div class="nav">
     <a class="logo" href="../ja.html"><svg class="logo-gem" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</a>
@@ -64,10 +67,13 @@ tr:last-child td{border-bottom:none}
 
   <article>
 
+    <div class="callout" style="margin-top:0"><strong>結論（まず3行）</strong><br>
+    30名以下で最安を狙うならHRMOS勤怠（0円）かレコル（30名以下は月3,000円）。迷ったら全部入りのKING OF TIME（300円/人）が基準器。すでにfreee／マネーフォワードの会計・給与を使っているなら、同系列に寄せるのが連携面で無難です。ただし<strong>「1人あたり単価」だけで選ぶと順位が逆転する</strong>ため、第4章の落とし穴を必ずご確認ください。</div>
+
     <h2>1. 比較表（10社サマリー）</h2>
     <div class="tbl"><table>
       <tr><th>サービス</th><th>月額/1人</th><th>最低利用料金・条件</th><th>初期費用</th><th>無料トライアル</th><th>特徴ひとこと</th><th>ソース</th></tr>
-      <tr><td>KING OF TIME</td><td>300円</td><td>なし（1名〜）</td><td>0円</td><td>30日</td><td>ワンプライスで給与・人事労務・データ分析まで込み。利用ID数シェアNo.1</td><td><a href="https://www.kingoftime.jp/costlist/cost/">料金</a></td></tr>
+      <tr><td>KING OF TIME</td><td>300円</td><td>なし（1名〜）</td><td>0円</td><td>30日</td><td>ワンプライスで給与・人事労務・データ分析まで込み。利用ID数シェアNo.1（富士キメラ総研「ソフトウェアビジネス新市場 2025年版」・2024年度実績）</td><td><a href="https://www.kingoftime.jp/costlist/cost/">料金</a></td></tr>
       <tr><td>タッチオンタイム</td><td>300円</td><td>なし（1名〜・契約期間縛りなし）</td><td>0円（打刻端末は別途）</td><td>30日</td><td>KING OF TIMEのOEM。独自打刻機「タッチオンタイムレコーダー」</td><td><a href="https://www.kintaisystem.com/price/">料金</a></td></tr>
       <tr><td>ジョブカン勤怠管理</td><td>200〜500円（1機能200円、追加+100円）</td><td>月2,000円</td><td>0円</td><td>30日（無料プランも常設）</td><td>出勤・シフト・休暇申請・工数の4機能を選んで課金</td><td><a href="https://jobcan.ne.jp/price">料金</a></td></tr>
       <tr><td>マネーフォワード クラウド勤怠</td><td>基本料に5名分込み＋6名以降300円/人</td><td>基本料: 年払い月2,480円（ひとり法人）〜6,480円（ビジネス）</td><td>0円</td><td>1ヶ月</td><td>ERP型。MF給与・会計とセット前提の設計</td><td><a href="https://biz.moneyforward.com/attendance/price/">料金</a></td></tr>
@@ -78,6 +84,7 @@ tr:last-child td{border-bottom:none}
       <tr><td>kincone</td><td><strong>220円（税込）</strong></td><td>5名〜（最低月1,100円税込相当）</td><td>記載なし（要確認）</td><td>最大2ヶ月</td><td>交通系ICカード読取で勤怠＋交通費精算を同時処理</td><td><a href="https://www.kincone.com/">公式</a></td></tr>
       <tr><td>レコル</td><td>100円</td><td>30名以下は月3,000円</td><td>0円</td><td>30日</td><td>100円で有給管理・申請承認・36協定管理まで込み。給与計算は+200円で300円プラン</td><td><a href="https://www.recoru.in/price/">料金</a></td></tr>
     </table></div>
+    <p style="font-size:.85rem;color:var(--ink-soft)">※本表は2026年7月20日時点の各社公式表示のスナップショットです。料金・仕様は改定されます。契約前には必ず各社公式ページで最新条件をご確認ください。誤りのご指摘は hello@ruribrief.com へ（確認のうえ速やかに訂正します）。</p>
     <p>補欠として調査したCLOUZA（アマノビジネスソリューションズ）は本体200円/人だが、有給管理+100円・ワークフロー+100円等のオプション課金型（<a href="https://clouza.jp/price/">料金</a>、後述の落とし穴①参照）。</p>
 
     <h2>2. 各社の解説</h2>
@@ -129,7 +136,7 @@ tr:last-child td{border-bottom:none}
     <div class="tbl"><table>
       <tr><th>対象</th><th>URL</th></tr>
       <tr><td>KING OF TIME 料金</td><td><a href="https://www.kingoftime.jp/costlist/cost/">kingoftime.jp/costlist/cost</a></td></tr>
-      <tr><td>タッチオンタイム 料金・実績</td><td><a href="https://www.kintaisystem.com/price/">kintaisystem.com/price</a></td></tr>
+      <tr><td>タッチオンタイム 料金・実績</td><td><a href="https://www.kintaisystem.com/price/">kintaisystem.com/price</a> ・ <a href="https://www.kintaisystem.com/">実績（トップページ）</a></td></tr>
       <tr><td>ジョブカン勤怠管理 料金</td><td><a href="https://jobcan.ne.jp/price">jobcan.ne.jp/price</a></td></tr>
       <tr><td>マネーフォワード クラウド勤怠 料金</td><td><a href="https://biz.moneyforward.com/attendance/price/">biz.moneyforward.com/attendance/price</a></td></tr>
       <tr><td>freee人事労務 料金</td><td><a href="https://www.freee.co.jp/hr/pricing/">freee.co.jp/hr/pricing</a></td></tr>
@@ -144,7 +151,7 @@ tr:last-child td{border-bottom:none}
     </table></div>
 
     <div class="method">
-      <strong>調査方法と限界:</strong> 各社公式サイトの現行料金ページを2026年7月20日に直接取得（一次情報）。確認できなかった値は捏造せず「要問合せ」「記載なし」と明記しています（SmartHR全プラン料金・jinjer正確単価・kincone初期費用・freeeトライアル期間・MM総研の勤怠シェア調査）。料金は改定されるため、契約前には必ず最新の公式ページをご確認ください。
+      <strong>調査方法と限界:</strong> 各社公式サイトの現行料金ページを2026年7月20日に直接取得（一次情報）。確認できなかった値は捏造せず「要問合せ」「記載なし」と明記しています（SmartHR全プラン料金・jinjer正確単価・kincone初期費用・freeeトライアル期間・MM総研の勤怠シェア調査）。料金は改定されるため、契約前には必ず最新の公式ページをご確認ください。記載の会社名・サービス名は各社の商標または登録商標です。本レポートは各社と提携関係になく、表中の「No.1」等は各社発表および出典記載の調査に基づく第三者の表示であり、当社の評価ではありません。
     </div>
 
     <div class="cta">

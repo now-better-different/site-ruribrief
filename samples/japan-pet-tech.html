@@ -7,7 +7,7 @@
 <meta name="description" content="Sample research brief: Japan's pet tech market. Every claim cited to primary Japanese sources.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <style>
-:root{--ruri:#1e50a2;--ruri-deep:#16407e;--ruri-pale:#eef3fa;--ink:#1c2431;--ink-soft:#4a5568;--line:#dbe3ee;--gold:#b8860b}
+:root{--ruri:#1e50a2;--ruri-deep:#16407e;--ruri-pale:#eef3fa;--ink:#1c2431;--ink-soft:#4a5568;--line:#dbe3ee;--gold:#8a6508}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);line-height:1.75;font-size:16px;background:#fff}
 h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.35}
@@ -30,7 +30,10 @@ article h2:first-child{margin-top:0}
 article p{margin-bottom:16px}
 article ul,article ol{margin:0 0 16px 24px}
 article li{margin-bottom:8px}
-.tbl{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:8px}
+.tbl{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:8px;position:relative}
+.tbl::before{content:"→ swipe to see all columns";display:block;font-size:.72rem;color:var(--ink-soft);text-align:right;padding:6px 10px 0}
+@media(min-width:900px){.tbl::before{display:none}}
+article a{text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(30,80,162,.45)}
 table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:640px}
 th{background:var(--ruri-pale);text-align:left;padding:10px 14px;font-weight:700;border-bottom:2px solid var(--line);white-space:nowrap}
 td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -47,7 +50,7 @@ tr:last-child td{border-bottom:none}
 </head>
 <body>
 
-<div class="sample-band">SAMPLE REPORT — this is what a $180 Standard mini scan looks like</div>
+<div class="sample-band">SAMPLE REPORT — the format and depth of a $180 Standard scan (actual contents vary by brief) · <a href="../index.html#services" style="color:#fff;text-decoration:underline">see all tiers</a></div>
 <header>
   <div class="nav">
     <a class="logo" href="../index.html"><svg class="logo-gem" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</a>
@@ -106,12 +109,12 @@ tr:last-child td{border-bottom:none}
     <p><strong>Notable dynamics (2025–2026, sourced):</strong></p>
     <ul>
       <li><strong>RABO raised ¥800M in Feb 2025</strong> (cumulative ~¥3B — the largest for a domestic pet tech startup), with a capital alliance with Mitsui &amp; Co.'s Moon Creative Ventures to launch a dog device in Japan and the US simultaneously (<a href="https://thebridge.jp/2025/02/rabo-developer-of-healthcare-devices-for-cats-raises-800-million-yen-forms-capital-and-business-alliance-with-mitsui-co-subsidiary-developing-devices-for-dogs">BRIDGE</a>, <a href="https://rabo.cat/news/2025/02/21/feature_update/">RABO</a>). Catlog claims 60,000 cats on the platform (<a href="https://rabo.cat/catlog/">rabo.cat/catlog</a>).</li>
-      <li><strong>Consolidation has begun:</strong> Toletta Cats joined the Estée Group in July 2026 (<a href="https://jp.tolettacat.com/">official site</a>); Sharp exited hardware. Standalone hardware economics are hard at Japan's volumes — data/subscription models and insurer tie-ups are the survivors' pattern.</li>
+      <li><strong>Consolidation has begun:</strong> Toletta Cats was acquired by S.T. Corporation (エステー, the Japanese household- and pet-care products maker) in July 2026 — 100% share acquisition announced July 17 (<a href="https://www.st-c.co.jp/news/newsrelease/2026/20260717_002339.html">S.T. news release</a>); Sharp exited hardware. Standalone hardware economics are hard at Japan's volumes — data/subscription models and insurer tie-ups are the survivors' pattern.</li>
     </ul>
 
     <h2>4. Distribution Channels</h2>
     <ul>
-      <li><strong>Pet-product EC market: ¥361.2B expected in 2025, forecast ¥438.8B by 2030</strong> (+28.4% vs 2024's ~¥342B) — Fuji Keizai (<a href="https://www.fuji-keizai.co.jp/press/detail.html?cid=24046&amp;la=ja&amp;la=en">press</a>, <a href="https://www.fkg-report.jp/market-trends/2026/2584.html">2026 update</a>). <strong>Large EC malls (Amazon, Rakuten) take just under 80% of pet EC.</strong></li>
+      <li><strong>Pet-product EC market: ¥361.2B expected in 2025, forecast ¥438.8B by 2030</strong> (+28.4% vs 2024's ~¥342B) — Fuji Keizai, "Pet EC Market Survey 2025" (<a href="https://www.fkg-report.jp/market-trends/2026/2584.html">released Feb 17, 2026</a>; prior-year press: <a href="https://www.fuji-keizai.co.jp/press/detail.html?cid=24046&amp;la=ja">cid=24046</a>). <strong>Large EC malls (Amazon, Rakuten) take just under 80% of pet EC.</strong></li>
       <li>Rough EC share of the total pet market: ~19% (<em>our estimate</em> — Fuji Keizai EC figure over Yano total; definitions differ, products vs products+services).</li>
       <li>Context: Japan's overall B2C EC was ¥26.1T in 2024, +5.1% (<a href="https://www.meti.go.jp/press/2025/08/20250826005/20250826005.html">METI e-commerce survey, Aug 2025</a>).</li>
       <li>Offline structure: pet specialty chains and home centers dominate consumables; <strong>consumer electronics retail (Yodobashi) and warehouse clubs (Costco Japan) now stock smart litter boxes</strong> — evidence that pet tech hardware is being treated as a home-appliance category. Insurance is distributed heavily at pet-shop point of sale (Anicom/ipet model).</li>
@@ -138,7 +141,7 @@ tr:last-child td{border-bottom:none}
     <div class="callout"><strong>Implications for a prospective entrant (analyst view):</strong> (1) The addressable device market is small but under-penetrated relative to 15.7M dogs+cats — subscription/data attach rates, not unit sales, are the economic engine. (2) Cat-first products fit Japan's population mix. (3) Amazon/Rakuten cover ~80% of pet EC — marketplace excellence plus one credibility channel (Yodobashi-type retail or an insurer partnership) is a viable full stack without a subsidiary. (4) Japanese-language support and PSE/技適 compliance are table stakes; buyer guides actively steer consumers away from parallel imports.</div>
 
     <div class="method">
-      <strong>Method &amp; limitations:</strong> Desk research only (July 2026), Japanese primary sources (Yano Research, Fuji Keizai, METI, Japan Pet Food Association, company IR/official stores) plus flagged secondary aggregators. Figures marked "estimate" are ours or vendor estimates. Fuji Keizai/Yano full reports are paywalled; figures cited are from public press releases. A full scan would add interviews and paid-report reconciliation. Two commonly repeated claims were checked and <strong>excluded as unverifiable</strong>: Uni-Charm has no confirmed smart/IoT product (only conventional system toilets), and Sharp's Pet Care Monitor hardware is discontinued.
+      <strong>Method &amp; limitations:</strong> Desk research only (July 2026), Japanese primary sources (Yano Research, Fuji Keizai, METI, Japan Pet Food Association, company IR/official stores) plus flagged secondary aggregators. Figures marked "estimate" are ours or vendor estimates. Fuji Keizai/Yano full reports are paywalled; figures cited are from public press releases. A full scan would add interviews and paid-report reconciliation. Two commonly repeated claims were checked and <strong>excluded as unverifiable</strong>: as of July 2026, we could not confirm any smart/IoT product from Uni-Charm (only conventional system toilets), and Sharp's Pet Care Monitor hardware was listed as discontinued on the official page. All company and product names are trademarks of their respective owners; Ruri Brief is not affiliated with any company mentioned. Prices and specs are snapshots as of July 20, 2026 — verify with official pages before decisions. Corrections: hello@ruribrief.com.
     </div>
 
     <div class="cta">

@@ -4,8 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ruri Brief — Japan, researched. Delivered in days.</title>
-<meta name="description" content="Fixed-price Japan market research, delivered async in 48–96 hours. Every claim cited to primary Japanese sources. No meetings required.">
+<meta name="description" content="Fixed-price Japan market research, delivered async in 48–96 hours (business days). Every fact cited to a source; estimates labeled. No meetings required.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ruribrief.com/">
+<link rel="alternate" hreflang="en" href="https://ruribrief.com/">
+<link rel="alternate" hreflang="ja" href="https://ruribrief.com/ja.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ruri Brief — Japan, researched. Delivered in days.">
+<meta property="og:description" content="Fixed-price Japan market research, delivered async in 48–96 hours. Every fact cited; estimates labeled.">
+<meta property="og:url" content="https://ruribrief.com/">
+<meta name="twitter:card" content="summary">
 <style>
 :root{
   --ruri:#1e50a2;        /* 瑠璃色 */
@@ -15,7 +23,7 @@
   --ink-soft:#4a5568;
   --line:#dbe3ee;
   --bg:#ffffff;
-  --gold:#b8860b;
+  --gold:#8a6508;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -31,7 +39,7 @@ header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:bl
 .logo{display:flex;align-items:center;gap:10px;font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--ink)}
 .logo:hover{text-decoration:none}
 .logo-gem{width:16px;height:19px;flex-shrink:0}
-.nav-links{display:flex;gap:28px;font-size:.92rem}
+.nav-links{display:flex;gap:28px;font-size:.92rem;align-items:center}
 .nav-links a{color:var(--ink-soft)}
 .nav-links a:hover{color:var(--ruri);text-decoration:none}
 .lang{font-size:.85rem;border:1px solid var(--line);padding:4px 12px;border-radius:20px;color:var(--ink-soft)}
@@ -40,13 +48,14 @@ header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:bl
 .hero{padding:96px 0 72px;background:linear-gradient(180deg,var(--ruri-pale) 0%,#fff 100%)}
 .hero h1{font-size:clamp(2rem,5vw,3.1rem);max-width:720px;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--ruri)}
-.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:640px;margin-bottom:32px}
+.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:660px;margin-bottom:32px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:600;font-size:.98rem;transition:all .15s}
 .btn-primary{background:var(--ruri);color:#fff}
 .btn-primary:hover{background:var(--ruri-deep);text-decoration:none}
 .btn-ghost{border:1.5px solid var(--ruri);color:var(--ruri)}
 .btn-ghost:hover{background:var(--ruri-pale);text-decoration:none}
+.cta-note{font-size:.85rem;color:var(--ink-soft);margin-top:12px;max-width:640px}
 .hero-facts{display:flex;gap:36px;margin-top:48px;flex-wrap:wrap}
 .fact b{display:block;font-size:1.5rem;color:var(--ruri);font-family:Georgia,serif}
 .fact span{font-size:.85rem;color:var(--ink-soft)}
@@ -67,13 +76,15 @@ h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:14px}
 .card ul{list-style:none;margin-bottom:20px;flex-grow:1}
 .card li{font-size:.9rem;padding:5px 0 5px 24px;position:relative;color:var(--ink)}
 .card li::before{content:"✓";position:absolute;left:2px;color:var(--ruri);font-weight:700}
-.price{font-family:Georgia,serif;font-size:1.3rem;color:var(--ink)}
-.price small{font-size:.8rem;color:var(--ink-soft);font-family:inherit}
+.tiers{border-top:1px solid var(--line);margin-top:4px;padding-top:14px;font-size:.9rem}
+.tiers div{display:flex;justify-content:space-between;padding:4px 0}
+.tiers b{font-family:Georgia,serif;color:var(--ink);white-space:nowrap;margin-left:12px}
+.tiers span{color:var(--ink-soft)}
 
 /* how */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;counter-reset:step}
 .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px;counter-increment:step}
-.step::before{content:counter(step,decimal-leading-zero);font-family:Georgia,serif;font-size:1.9rem;color:var(--ruri);opacity:.35;display:block;margin-bottom:8px}
+.step::before{content:counter(step,decimal-leading-zero);font-family:Georgia,serif;font-size:1.9rem;color:#5b7db3;display:block;margin-bottom:8px}
 .step h3{font-size:1.02rem;margin-bottom:8px}
 .step p{font-size:.88rem;color:var(--ink-soft)}
 
@@ -86,6 +97,7 @@ h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:14px}
 /* faq */
 details{border-bottom:1px solid var(--line);padding:18px 0}
 summary{cursor:pointer;font-weight:600;font-size:1rem;list-style:none;position:relative;padding-right:32px}
+summary::-webkit-details-marker{display:none}
 summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--ruri);font-size:1.3rem;font-weight:400}
 details[open] summary::after{content:"–"}
 details p{margin-top:12px;font-size:.93rem;color:var(--ink-soft);max-width:720px}
@@ -94,7 +106,7 @@ details p{margin-top:12px;font-size:.93rem;color:var(--ink-soft);max-width:720px
 footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;color:var(--ink-soft)}
 .foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .foot-note{max-width:520px}
-@media(max-width:640px){.nav-links{display:none}.hero{padding:64px 0 48px}}
+@media(max-width:640px){.nav-links a{display:none}.nav-links a.lang{display:inline-block}.hero{padding:64px 0 48px}}
 </style>
 </head>
 <body>
@@ -104,10 +116,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
     <a class="logo" href="#"><svg class="logo-gem" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</a>
     <nav class="nav-links">
       <a href="#services">Services</a>
+      <a href="samples/japan-pet-tech.html">Sample</a>
       <a href="#how">How it works</a>
       <a href="#why">Why Ruri</a>
       <a href="#faq">FAQ</a>
-      <a class="lang" href="ja.html">日本語</a>
+      <a class="lang" href="ja.html" lang="ja" hreflang="ja">日本語</a>
     </nav>
   </div>
 </header>
@@ -115,14 +128,15 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
 <div class="hero">
   <div class="wrap">
     <h1>Japan, researched.<br><em>Delivered in days.</em></h1>
-    <p class="lead">Fixed-price research briefs on the Japanese market — competitors, pricing, regulations, channels — built from primary Japanese-language sources and delivered async in 48–96 hours. No calls. No meetings. Every claim cited.</p>
+    <p class="lead">Fixed-price research briefs on the Japanese market — competitors, pricing, regulations, channels — built from official Japanese-language sources and delivered async in 48–96 hours (business days). No calls. No meetings. Every fact linked to its source.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=Research%20inquiry">Request a brief</a>
+      <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=Research%20inquiry&amp;body=Market%20%2F%20product%3A%20%0ADecision%20we%20need%20to%20make%3A%20%0ACompetitors%20or%20keywords%20we%20know%3A%20%0ADeadline%3A%20">Request a fixed quote</a>
       <a class="btn btn-ghost" href="samples/japan-pet-tech.html">Read a sample brief</a>
     </div>
+    <p class="cta-note">The button opens a pre-structured email. If it doesn't, just write to <strong>hello@ruribrief.com</strong> with your market, the decision you're making, and your deadline — scope and price come back in writing within one business day, usually within hours.</p>
     <div class="hero-facts">
-      <div class="fact"><b>48–96h</b><span>standard turnaround</span></div>
-      <div class="fact"><b>100%</b><span>claims cited to sources</span></div>
+      <div class="fact"><b>48–96h</b><span>turnaround, business days</span></div>
+      <div class="fact"><b>Every fact</b><span>cited — estimates labeled</span></div>
       <div class="fact"><b>0</b><span>meetings required</span></div>
       <div class="fact"><b>EN / JA</b><span>bilingual delivery</span></div>
     </div>
@@ -133,32 +147,37 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
   <div class="wrap">
     <div class="kicker">Services</div>
     <h2>Three ways to see Japan clearly</h2>
-    <p class="sub">Productized, fixed-price, async. You send a written brief; we send back evidence. Prices in USD; JPY invoicing available.</p>
+    <p class="sub">Productized, fixed-price, async. You send a written question; we send back evidence. Pay by card (Stripe) in USD, or by invoice in USD/JPY.</p>
     <div class="cards">
       <div class="card">
         <div class="tag">RESEARCH SPRINT</div>
         <h3>Japan Market Brief</h3>
         <p>A focused scan of your market question — competitors, pricing, market size, entry considerations.</p>
         <ul>
-          <li>Primary Japanese-language sources</li>
+          <li>Official Japanese-language sources</li>
           <li>Source URL table + raw data CSV</li>
           <li>Facts and estimates clearly separated</li>
-          <li>48–96 hour delivery</li>
         </ul>
-        <div class="price">$75 – $400 <small>/ brief, by scope</small></div>
-        <p style="margin:14px 0 0"><a href="samples/japan-pet-tech.html" style="font-size:.88rem;font-weight:600">→ See a sample: Japan's Pet Tech Market</a></p>
+        <div class="tiers">
+          <div><span>Quick Scan — one focused question, 2–3-page memo, 48h</span><b>$75</b></div>
+          <div><span>Standard — full mini scan like our sample: 10+ players, source table + CSV, 72h</span><b>$180</b></div>
+          <div><span>Deep Scan — Standard + regulatory &amp; entry-mode notes, 96h</span><b>$400</b></div>
+        </div>
+        <p style="margin:14px 0 0"><a href="samples/japan-pet-tech.html" style="font-size:.88rem;font-weight:600">→ See a $180 Standard sample: Japan's Pet Tech Market</a></p>
       </div>
       <div class="card">
         <div class="tag">MONITORING</div>
-        <h3>Japan Monitoring</h3>
+        <h3>Japan Market Monitoring</h3>
         <p>Ongoing English summaries of Japanese news, competitor moves and regulatory changes in your sector — to your inbox or Slack.</p>
         <ul>
-          <li>Weekly or daily cadence</li>
           <li>Competitor &amp; regulatory watch</li>
           <li>Sources linked in every issue</li>
           <li>Cancel anytime</li>
         </ul>
-        <div class="price">$200 – $700 <small>/ month</small></div>
+        <div class="tiers">
+          <div><span>Weekly digest</span><b>$200 / mo</b></div>
+          <div><span>Daily brief</span><b>$700 / mo</b></div>
+        </div>
       </div>
       <div class="card">
         <div class="tag">DATA SPRINT</div>
@@ -167,10 +186,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
         <ul>
           <li>Clean CSV / Google Sheets delivery</li>
           <li>Japanese-source specialty</li>
-          <li>Compliance-checked collection</li>
-          <li>Re-run scripts available</li>
+          <li>Collection respects robots.txt and site terms of use (not legal advice)</li>
+          <li>Re-runnable scripts available</li>
         </ul>
-        <div class="price">$250 – $900 <small>/ project</small></div>
+        <div class="tiers">
+          <div><span>Single-source extraction</span><b>$250</b></div>
+          <div><span>Multi-source + recurring script</span><b>$500–900</b></div>
+        </div>
       </div>
     </div>
   </div>
@@ -180,11 +202,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
   <div class="wrap">
     <div class="kicker">Process</div>
     <h2>How it works — fully async</h2>
-    <p class="sub">Designed for founders and teams who want answers, not another meeting on the calendar.</p>
+    <p class="sub">Designed for founders and teams who want answers, not another meeting on the calendar. Async by default; an optional paid call is available if you need one.</p>
     <div class="steps">
-      <div class="step"><h3>Send a written brief</h3><p>Tell us your question in an email or a short form. We confirm scope, price and deadline in writing within hours.</p></div>
-      <div class="step"><h3>We research</h3><p>We work Japanese-language primary sources: government data, industry press, company disclosures, price pages.</p></div>
-      <div class="step"><h3>You get evidence</h3><p>A structured PDF/Doc with a source table, plus raw data as CSV. Facts and estimates are always labeled.</p></div>
+      <div class="step"><h3>Send us your question</h3><p>Tell us what you need to know in a short email. We confirm scope, price and deadline in writing within one business day — usually within hours.</p></div>
+      <div class="step"><h3>We research</h3><p>We go straight to Japanese-language primary sources: government data, industry press, company disclosures, price pages.</p></div>
+      <div class="step"><h3>You get evidence</h3><p>A structured PDF or Word document with a source table, plus raw data as CSV. Facts and estimates are always labeled.</p></div>
       <div class="step"><h3>Written follow-up</h3><p>Questions after delivery? Two rounds of written clarification are included in every brief.</p></div>
     </div>
   </div>
@@ -193,10 +215,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
 <section id="why">
   <div class="wrap">
     <div class="kicker">Why Ruri Brief</div>
-    <h2>Research you can defend in a board room</h2>
+    <h2>Research you can defend in the boardroom</h2>
     <div class="why" style="margin-top:36px">
-      <div class="why-item"><h3><span class="dot"></span>Native Japanese sources</h3><p>Most of Japan's market reality never appears in English. We read the government statistics, trade press and filings that machine translation misses.</p></div>
-      <div class="why-item"><h3><span class="dot"></span>Every claim cited</h3><p>Each fact links to its source. Estimates are labeled as estimates, with the reasoning shown. You can verify everything we write.</p></div>
+      <div class="why-item"><h3><span class="dot"></span>Official Japanese sources</h3><p>Most of Japan's market reality never appears in English. We read the government statistics, company disclosures and trade press that never make it into English — and label primary, secondary and vendor-estimate sources for what they are.</p></div>
+      <div class="why-item"><h3><span class="dot"></span>Every fact cited</h3><p>Each fact links to its source. Estimates are labeled as estimates, with the reasoning shown. You can verify everything we write.</p></div>
       <div class="why-item"><h3><span class="dot"></span>AI-accelerated, human-verified</h3><p>We use AI tooling openly to read more, faster — and a human verifies sources and signs off on every deliverable before it ships.</p></div>
       <div class="why-item"><h3><span class="dot"></span>Fixed price, no surprises</h3><p>Scope and price agreed in writing before we start. If we can't answer your question, we say so before you pay.</p></div>
     </div>
@@ -213,12 +235,24 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
         <p>Yes, openly. AI tooling lets us read and structure far more Japanese-language material than a human researcher could in the same time. Every deliverable is source-verified and reviewed by a human before delivery, and we never ship unedited AI output. If your platform or policy requires AI disclosure, we comply fully.</p>
       </details>
       <details>
+        <summary>Is my question confidential?</summary>
+        <p>Yes. Your brief, our findings, and the fact that you asked are never resold, reused or referenced. We do not input your confidential materials into third-party AI tools without your explicit approval. A mutual NDA is available on request at no extra charge on Standard briefs and above.</p>
+      </details>
+      <details>
         <summary>Really no meetings?</summary>
-        <p>Really. Scoping happens in writing — it's faster and leaves a record. If you strongly prefer a call, we offer a paid 25-minute written-summary call on Standard-tier projects and above.</p>
+        <p>Really. Scoping happens in writing — it's faster and leaves a record. If you'd like to talk, a paid 25-minute call ($60) — with a written summary sent afterward, so the record stays async — is available on Standard briefs and above.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>By card (Stripe, USD) once you approve the quote, or by invoice with bank transfer in USD or JPY for teams that need one. Japanese qualified invoices (適格請求書) available.</p>
+      </details>
+      <details>
+        <summary>When does the clock start?</summary>
+        <p>When scope is confirmed in writing and payment is received. Turnaround is quoted in business days. If we're going to miss an agreed deadline, we tell you immediately and agree a remedy on the affected scope.</p>
       </details>
       <details>
         <summary>What if the research can't answer my question?</summary>
-        <p>If we determine mid-project that public sources can't support a reliable answer, we tell you what we found, what's missing, and refund the difference for undelivered scope. We'd rather lose a fee than ship guesswork.</p>
+        <p>If public sources can't support a reliable answer, we deliver a "no reliable public answer" memo — what we searched, what we found, what remains unknown — and refund the undelivered portion of the agreed scope. We'd rather lose a fee than ship guesswork.</p>
       </details>
       <details>
         <summary>How do revisions work?</summary>
@@ -226,7 +260,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
       </details>
       <details>
         <summary>Who is behind Ruri Brief?</summary>
-        <p>Ruri Brief is operated by a Tokyo-based research LLC. Full legal details are provided in every proposal, contract and invoice. "Ruri" (瑠璃) is the Japanese word for lapis lazuli — the deep blue of careful work.</p>
+        <p>Ruri Brief is operated by a Tokyo-based research LLC. Corporate details are published on our <a href="legal.html">Legal &amp; Company page</a> and stated in every proposal, contract and invoice. "Ruri" (瑠璃) is the Japanese word for lapis lazuli — the deep blue of careful work.</p>
       </details>
       <details>
         <summary>Can you invoice in JPY? Do you support Japanese clients?</summary>
@@ -239,8 +273,8 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
 <section>
   <div class="wrap" style="text-align:center">
     <h2 style="margin-bottom:12px">Ready when you are</h2>
-    <p class="sub" style="margin:0 auto 28px">Send your question today. Scope and quote back in writing within hours.</p>
-    <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=Research%20inquiry">hello@ruribrief.com</a>
+    <p class="sub" style="margin:0 auto 28px">Send your question today. Scope and quote back in writing within one business day — usually within hours.</p>
+    <a class="btn btn-primary" href="mailto:hello@ruribrief.com?subject=Research%20inquiry&amp;body=Market%20%2F%20product%3A%20%0ADecision%20we%20need%20to%20make%3A%20%0ACompetitors%20or%20keywords%20we%20know%3A%20%0ADeadline%3A%20">hello@ruribrief.com</a>
   </div>
 </section>
 
@@ -249,9 +283,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.86rem;col
     <div>
       <div class="logo" style="font-size:1.05rem;margin-bottom:10px"><svg class="logo-gem" style="width:12px;height:14px" viewBox="0 0 24 28" aria-hidden="true"><polygon points="12,1 4,14 12,14" fill="#7da3e3"/><polygon points="12,1 20,14 12,14" fill="#3566b5"/><polygon points="4,14 12,27 12,14" fill="#2a5aa8"/><polygon points="20,14 12,27 12,14" fill="#16407e"/></svg>Ruri Brief</div>
       <p>Japan, researched. Delivered in days.</p>
+      <p style="margin-top:8px"><a href="samples/japan-pet-tech.html">Sample brief</a> · <a href="legal.html">Legal &amp; Company</a> · <a href="ja.html" lang="ja" hreflang="ja">日本語</a></p>
     </div>
     <div class="foot-note">
-      <p>© 2026 Ruri Brief. Operated by a Tokyo-based research LLC; corporate details are stated in all proposals, contracts and invoices. <a href="ja.html">日本語</a></p>
+      <p>© 2026 Ruri Brief. Operated by a Tokyo-based research LLC; corporate details are on the <a href="legal.html">Legal &amp; Company page</a> and in all proposals, contracts and invoices.</p>
     </div>
   </div>
 </footer>
