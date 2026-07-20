@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
   <defs>
     <linearGradient id="gTL" x1="8" y1="3" x2="14" y2="14" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#EDF4FF"/><stop offset="55%" stop-color="#8FB2F4"/><stop offset="100%" stop-color="#3E68D8"/>
+      <stop offset="0%" stop-color="#8FACDE"/><stop offset="60%" stop-color="#48699F"/><stop offset="100%" stop-color="#3A5AA8"/>
     </linearGradient>
     <linearGradient id="gTR" x1="16" y1="4" x2="25" y2="15" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#7FA0EC"/><stop offset="60%" stop-color="#2C51BE"/><stop offset="100%" stop-color="#152F8E"/>
+      <stop offset="0%" stop-color="#3E5C9A"/><stop offset="60%" stop-color="#243C74"/><stop offset="100%" stop-color="#1C3164"/>
     </linearGradient>
     <linearGradient id="gBL" x1="4" y1="15" x2="14" y2="25" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3E68D8"/><stop offset="60%" stop-color="#1E3FA6"/><stop offset="100%" stop-color="#122868"/>
+      <stop offset="0%" stop-color="#31508E"/><stop offset="60%" stop-color="#1C3168"/><stop offset="100%" stop-color="#14244E"/>
     </linearGradient>
     <linearGradient id="gBR" x1="15" y1="14" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1E3FA6"/><stop offset="55%" stop-color="#101F60"/><stop offset="100%" stop-color="#070F38"/>
+      <stop offset="0%" stop-color="#1E3468"/><stop offset="60%" stop-color="#0E1C40"/><stop offset="100%" stop-color="#081028"/>
     </linearGradient>
-    <radialGradient id="gFire" cx="13.7" cy="13.6" r="5.5" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/><stop offset="50%" stop-color="#BFD9FF" stop-opacity="0.3"/><stop offset="100%" stop-color="#BFD9FF" stop-opacity="0"/>
+    <radialGradient id="gLight" cx="9.5" cy="8.5" r="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C4DAFF" stop-opacity="0.75"/><stop offset="45%" stop-color="#7E9EE0" stop-opacity="0.22"/><stop offset="100%" stop-color="#7E9EE0" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="gClip"><polygon points="14,1 27,14 14,27 1,14"/></clipPath>
   </defs>
@@ -21,7 +21,6 @@
   <polygon points="14,1 27,14 13.7,13.6" fill="url(#gTR)"/>
   <polygon points="1,14 13.7,13.6 14,27" fill="url(#gBL)"/>
   <polygon points="13.7,13.6 27,14 14,27" fill="url(#gBR)"/>
-  <circle cx="13.7" cy="13.6" r="5.5" fill="url(#gFire)" clip-path="url(#gClip)"/>
-  <line x1="14" y1="1" x2="13.7" y2="13.6" stroke="#FFFFFF" stroke-width="0.5" opacity="0.85"/>
-  <polygon points="14,1 27,14 14,27 1,14" fill="none" stroke="#B9CFF6" stroke-width="0.45" opacity="0.5" stroke-linejoin="round"/>
+  <circle cx="9.5" cy="8.5" r="10" fill="url(#gLight)" clip-path="url(#gClip)"/>
+  <polygon points="14,1 27,14 14,27 1,14" fill="none" stroke="#9FB6E4" stroke-width="0.4" opacity="0.35" stroke-linejoin="round"/>
 </svg>
